@@ -45,9 +45,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -134,6 +134,7 @@ MEDIA_URL='/media/'
 
 CORS_ALLOWED_ORIGINS = [
     "https://frontend-eight-wine-69.vercel.app",
+    "https://frontend-eight-wine-69.vercel.app/#/",
     # Add any other frontend URLs here
 ]
 # CORS_ORIGIN_WHITELIST = (
