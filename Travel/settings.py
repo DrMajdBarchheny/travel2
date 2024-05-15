@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  
+      
 ]
 
 ROOT_URLCONF = 'Travel.urls'
@@ -131,9 +132,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 MEDIA_URL='/media/'
 
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'http://localhost:5173',
-    'https://my-app-seven-sigma-74.vercel.app/',
-    'https://frontend-eight-wine-69.vercel.app/',
-)
+CORS_ALLOWED_ORIGINS = [
+    "https://frontend-eight-wine-69.vercel.app",
+    # Add any other frontend URLs here
+]
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:3000',
+#     'http://localhost:5173',
+#     'https://my-app-seven-sigma-74.vercel.app/',
+#     'https://frontend-eight-wine-69.vercel.app/',
+# )
