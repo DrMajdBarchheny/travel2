@@ -135,5 +135,5 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://localhost:5173',
     'https://my-app-seven-sigma-74.vercel.app/',
-    'https://frontend-iz9j3rgpf-majdb791s-projects.vercel.app/,
+    'https://frontend-iz9j3rgpf-majdb791s-projects.vercel.app/',
 )
